@@ -1,3 +1,27 @@
-<p>
-  device-management works!
-</p>
+<app-header></app-header>
+
+<md-table #table [dataSource]="dataSource">
+
+    <ng-container cdkColumnDef="userId">
+      <md-header-cell *cdkHeaderCellDef> User Id </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.userId}} </md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="id">
+      <md-header-cell *cdkHeaderCellDef>ID </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.id}} </md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="title">
+      <md-header-cell *cdkHeaderCellDef> Title </md-header-cell>
+      <md-cell *cdkCellDef="let row"> {{row.title}} </md-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="body">
+      <md-header-cell *cdkHeaderCellDef>Body</md-header-cell>
+      <md-cell *cdkCellDef="let row" > {{row.body}} </md-cell>
+    </ng-container>
+
+    <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+  </md-table>
