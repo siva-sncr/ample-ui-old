@@ -54,6 +54,7 @@ import {
   MdTooltipModule,
 } from '@angular/material'; 
 import {CdkTableModule} from '@angular/cdk';
+import { MapComponent } from './map/map.component';
 @NgModule({
   exports: [
     CdkTableModule,
@@ -99,6 +100,7 @@ export class NgMaterialModule {}
     DashboardComponent,
     DeviceManagementComponent,
     LoginComponent,
+    MapComponent,
     
   ],
   imports: [
